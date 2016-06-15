@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tN5-t8-Vkk">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="8mw-wf-h3u">
+            <objects>
+                <collectionViewController id="tN5-t8-Vkk" customClass="CollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="H9d-QA-J2e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="vaN-Qi-daC" customClass="LeftRightCollectionViewLayout"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReuseIdentifier" id="I41-cO-G9b" customClass="LevelCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="256" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="256" height="256"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mm/dd/yyyy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1n-gO-dkQ">
+                                            <rect key="frame" x="5" y="200" width="246" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="LFo-3K-bsT"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ltO-bd-d6I">
+                                            <rect key="frame" x="68" y="68" width="120" height="120"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="XQh-Yb-OGo"/>
+                                                <constraint firstAttribute="height" constant="120" id="x7B-Cq-Axi"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Package arrived at a courier facility " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JS-yg-LWy">
+                                            <rect key="frame" x="10" y="35" width="236" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="HxH-ef-EMn"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="w1n-gO-dkQ" secondAttribute="bottom" constant="35" id="8Xa-5A-ElM"/>
+                                    <constraint firstItem="2JS-yg-LWy" firstAttribute="leading" secondItem="I41-cO-G9b" secondAttribute="leading" constant="10" id="Oxx-tE-7Y8"/>
+                                    <constraint firstItem="ltO-bd-d6I" firstAttribute="centerX" secondItem="I41-cO-G9b" secondAttribute="centerX" id="Xbv-5F-WnH"/>
+                                    <constraint firstItem="2JS-yg-LWy" firstAttribute="top" secondItem="I41-cO-G9b" secondAttribute="top" constant="35" id="ZJB-Mq-zIZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="2JS-yg-LWy" secondAttribute="trailing" constant="10" id="imH-eE-qSs"/>
+                                    <constraint firstItem="ltO-bd-d6I" firstAttribute="centerY" secondItem="I41-cO-G9b" secondAttribute="centerY" id="lX6-l4-D2j"/>
+                                    <constraint firstAttribute="trailing" secondItem="w1n-gO-dkQ" secondAttribute="trailing" constant="5" id="pk0-1h-Ci7"/>
+                                    <constraint firstItem="w1n-gO-dkQ" firstAttribute="leading" secondItem="I41-cO-G9b" secondAttribute="leading" constant="5" id="rYR-VJ-U3p"/>
+                                </constraints>
+                                <size key="customSize" width="256" height="256"/>
+                                <connections>
+                                    <outlet property="dateLbl" destination="w1n-gO-dkQ" id="NtU-3M-sYq"/>
+                                    <outlet property="imgView" destination="ltO-bd-d6I" id="c3Y-bR-LRt"/>
+                                    <outlet property="titleLbl" destination="2JS-yg-LWy" id="FSK-qz-OAZ"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="tN5-t8-Vkk" id="H9y-b8-8aE"/>
+                            <outlet property="delegate" destination="tN5-t8-Vkk" id="a40-yu-n4I"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oys-AC-pex" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292" y="515"/>
+        </scene>
+    </scenes>
+</document>
